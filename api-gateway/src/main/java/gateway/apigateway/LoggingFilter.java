@@ -18,7 +18,7 @@ public class LoggingFilter  implements GlobalFilter, Ordered {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, org.springframework.cloud.gateway.filter.GatewayFilterChain chain) {
-        /
+
         String path = exchange.getRequest().getURI().getPath();
         String method = exchange.getRequest().getMethodValue();
         String timestamp = LocalDateTime.now().format(formatter);

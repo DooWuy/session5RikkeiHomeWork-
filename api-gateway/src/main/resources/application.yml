@@ -12,6 +12,7 @@ spring:
                       - Path=/api/customers/**
                   filters:
                       - RewritePath=/api/customers/$\{segment}
+                      - AddResponseHeader=X-System-Name, Api-Gateway-System
             discovery:
                 locator:
                     enabled: true
@@ -37,5 +38,6 @@ logging:
         org.springframework.cloud.gateway: DEBUG
         org.springframework.web: DEBUG
         org.springframework.cloud.netflix.eureka: DEBUG
+        root: info
     pattern:
       console: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
