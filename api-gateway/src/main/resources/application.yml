@@ -37,3 +37,5 @@ logging:
         org.springframework.cloud.gateway: DEBUG
         org.springframework.web: DEBUG
         org.springframework.cloud.netflix.eureka: DEBUG
+    pattern:
+      console: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
